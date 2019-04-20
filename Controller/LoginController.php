@@ -54,12 +54,12 @@ class LoginController extends Controller {
     if(isset($_POST['name']) && !empty($_POST['name'])){
         $name = addslashes($_POST['name']);
         $email = addslashes($_POST['email']);
-        $password = addslashes($_POST['password']);
+        $password = md5($_POST['password']);
         
         if(!$user->verifyEmail($email)){
             
         $user->add_user($name, $email, $password);
-        
+        header('Location: '.BASE_URL."/User");        
         } else {
           $data['erro'] = "Já possui um usuário com esse email !!";    
         }
@@ -71,8 +71,9 @@ class LoginController extends Controller {
   
   public function add_company(){
     $data = [];
-      
      
+    
+
      $this->loadTemplate("Add_company", $data);
   }
   

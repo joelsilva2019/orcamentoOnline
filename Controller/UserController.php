@@ -24,5 +24,4 @@ class UserController extends Controller{
         header("Location: ".BASE_URL);
     }
     
-    
 }
