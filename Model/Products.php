@@ -113,4 +113,11 @@ class Products extends Model
         $sql->bindValue(':id', $idProd);
         $sql->execute();
     }
+
+    public function delete($id, $id_company){
+        $sql = $this->db->prepare('DELETE FROM products WHERE id = :id AND id_company = :id_company');
+        $sql->bindValue(':id', $id);
+        $sql->bindValue(':id_company', $id_company);
+        $sql->execute();
+    }
 }

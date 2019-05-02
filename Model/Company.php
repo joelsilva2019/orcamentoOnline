@@ -103,7 +103,7 @@ class Company extends Model
 
         if (!empty($password) && $password != '') {
             $sql = $this->db->prepare('UPDATE company SET password = :password WHERE id = :id');
-            $sql->bindValue(':password', $password);
+            $sql->bindValue(':password', md5($password));
             $sql->bindValue(':id', $id);
             $sql->execute();
         }

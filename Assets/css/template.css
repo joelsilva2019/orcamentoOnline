@@ -667,10 +667,11 @@ nav.menu-mobile li a:hover{
     font-size: 16px;
     color: #7c7c7c;
     padding: 5px;
+    border-bottom: 1px solid #ccc;
 }
 
 .table-prod tr td{
-    border: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
     color: #242424;
     padding: 5px;
 }

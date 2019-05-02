@@ -75,7 +75,7 @@
                         <tr>
                             <td><?php echo $prod['name']; ?></td>
                             <td><?php echo number_format($prod['price'], 2, ',','.'); ?></td>
-                            <td width="180"><a href="<?php echo BASE_URL; ?>/Products/edit/<?php echo $prod['id']; ?>">Editar</a> - <a href="<?php echo BASE_URL; ?>/Products/delete/<?php echo $prod['id']; ?>">Excluir</a></td>
+                            <td width="180"><a href="<?php echo BASE_URL; ?>/Company/editProd/<?php echo $prod['id']; ?>">Editar</a> - <a href="<?php echo BASE_URL; ?>/Company/deleteProd/<?php echo $prod['id']; ?>">Excluir</a></td>
                         </tr>
                     <?php endforeach; ?>
                 </table>

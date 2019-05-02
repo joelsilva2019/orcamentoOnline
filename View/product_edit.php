@@ -20,7 +20,7 @@
             <option value="kg">QUILO</option>
         </select>
         <span>Código</span>
-        <input type="number" name="code" value="<?php echo $prod_info['code']; ?>" />
+        <input type="number" name="code_prod_edit" value="<?php echo $prod_info['code']; ?>" />
         <span>Descrição</span>
         <textarea name="description">
             <?php echo $prod_info['description']; ?>
@@ -28,8 +28,8 @@
         <span>Imagem</span>
         <img src="<?php echo BASE_URL ?>/Assets/images/prods/<?php echo $prod_info['image']; ?>" width="100" height="100" />
 
-        <label>Selecionar imagem</label>
-        <input type="file" name="image" />
+        <label for="image">Selecionar imagem</label>
+        <input type="file" name="image" id="image"/>
         <input type="submit" value="Salvar" />
     </form>
 
